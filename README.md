@@ -1,10 +1,10 @@
-# Hanger 18 Tattoos • V4 / Artist-gallery preview
+# Hanger 18 Tattoos • V5 / Artist-gallery preview
 
 **Upload target:** https://github.com/Hanger18Tattoos/Hanger18Tattoos.github.io
 
 **Preview link after upload:** https://hanger18tattoos.github.io/
 
-This is an upgraded version of the original V4 design. It preserves all previous shop branding, logo, original storefront photograph, shop contact and booking links, and adds five Instagram profile links plus a preview selection of real sourced images.
+This is an upgraded version of the original V5 design. It preserves all previous shop branding, logo, original storefront photograph, shop contact and booking links, and adds five Instagram profile links plus a preview selection of real sourced images.
 
 ## Actual art and portraits in this version
 
