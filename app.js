@@ -1,128 +1,102 @@
 (() => {
-  "use strict";
-  const config = window.HANGER18;
-  const el = (tag, className, content) => {
-    const node = document.createElement(tag);
-    if (className) node.className = className;
-    if (content !== undefined) node.textContent = content;
-    return node;
-  };
-  const link = (label, href, cls, external = false) => {
-    const node = el("a", cls, label);
-    node.href = href;
-    if (external) { node.target = "_blank"; node.rel = "noopener noreferrer"; }
-    return node;
-  };
-  const contact = config.contactEmail;
-  document.getElementById("year").textContent = new Date().getFullYear();
-  document.getElementById("contact-email").textContent = contact;
-  document.getElementById("contact-email").href = `mailto:${contact}`;
-  document.getElementById("booking-email").href = `mailto:${contact}?subject=${encodeURIComponent("Tattoo booking inquiry")}`;
+  'use strict';
+  const data = window.H18;
+  if (!data) return;
+  const directory = document.getElementById('artist-directory');
+  const profiles = document.getElementById('artist-profiles');
+  const email = data.shopEmail;
+  const safe = (s) => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]));
+  const artistBooking = (name) => `mailto:${email}?subject=${encodeURIComponent(`Tattoo booking inquiry — ${name}`)}&body=${encodeURIComponent(`Hello Hanger 18,\n\nI'd like to inquire about booking with ${name}.\n\nMy tattoo idea:\nApproximate size / placement:\nAvailability:\n\nThank you!`)}`;
 
-  const menu = document.querySelector(".menu-toggle");
-  const nav = document.getElementById("main-nav");
-  function closeMenu() { menu.setAttribute("aria-expanded", "false"); menu.setAttribute("aria-label", "Open menu"); nav.classList.remove("is-open"); }
-  menu.addEventListener("click", () => {
-    const open = menu.getAttribute("aria-expanded") !== "true";
-    menu.setAttribute("aria-expanded", String(open)); menu.setAttribute("aria-label", open ? "Close menu" : "Open menu");
-    nav.classList.toggle("is-open", open);
-  });
-  nav.querySelectorAll("a").forEach(a => a.addEventListener("click", closeMenu));
-  document.addEventListener("keydown", ev => { if (ev.key === "Escape") closeMenu(); });
+  data.artists.forEach((artist, i) => {
+    const photoHtml = artist.portrait
+      ? `<img src="${safe(artist.portrait)}" alt="Portrait of ${safe(artist.name)}" loading="lazy">`
+      : `<div class="missing-portrait" aria-label="Photo of ${safe(artist.name)} coming soon"><span class="portrait-monogram" aria-hidden="true">${safe(artist.initials)}</span><span class="portrait-pending">ARTIST PHOTO<br>COMING SOON</span></div>`;
 
-  const index = document.getElementById("artist-index");
-  const profiles = document.getElementById("artist-profiles");
-  const lightbox = document.getElementById("lightbox");
-  const lightboxImg = document.getElementById("lightbox-image");
-  const lightboxCaption = document.getElementById("lightbox-caption");
-  document.querySelector(".lightbox-close").addEventListener("click", () => lightbox.close());
-  lightbox.addEventListener("click", ev => { if (ev.target === lightbox) lightbox.close(); });
+    const card = document.createElement('a');
+    card.className = 'artist-card reveal';
+    card.href = '#' + artist.id;
+    card.innerHTML = `<div class="artist-card-photo">${photoHtml}<span class="artist-card-n">0${i+1}</span></div><div class="artist-card-meta"><div><span>${safe(artist.role)}</span><strong>${safe(artist.name)}</strong></div><span class="artist-arrow" aria-hidden="true">↗</span></div>`;
+    directory.appendChild(card);
 
-  function setPhoto(container, path, alt, className) {
-    if (!path) return false;
-    const img = el("img", className || "");
-    img.src = path; img.alt = alt; img.loading = "lazy";
-    img.addEventListener("error", () => { img.remove(); container.classList.remove("has-photo"); });
-    container.append(img);
-    container.classList.add("has-photo");
-    return true;
-  }
+    const photos = [0,1,2].map((idx) => {
+      const gallery = artist.gallery[idx];
+      if (!gallery) return `<div class="portfolio-placeholder"><span class="portfolio-placeholder-number">0${idx+1}</span><span>TATTOO PHOTO<br>COMING SOON</span></div>`;
+      const file = typeof gallery === 'string' ? gallery : gallery.src;
+      const alt = typeof gallery === 'string' ? `${artist.name} tattoo portfolio image ${idx+1}` : (gallery.alt || `${artist.name} tattoo portfolio image ${idx+1}`);
+      return `<button type="button" class="gallery-thumb" data-lightbox-src="${safe(file)}" data-lightbox-alt="${safe(alt)}" aria-label="Enlarge tattoo from ${safe(artist.name)}"><img src="${safe(file)}" alt="${safe(alt)}" loading="lazy"><span aria-hidden="true">↗</span></button>`;
+    }).join('');
 
-  config.artists.forEach((artist, idx) => {
-    // Five compact index cards serve as the visual artist directory.
-    const card = link("", `#${artist.id}`, "artist-index-card");
-    card.setAttribute("aria-label", `Meet ${artist.name}`);
-    const cardPhoto = el("div", "index-portrait");
-    const artInitial = el("span", "initial", artist.name.split(" ").map(s => s[0]).slice(0, 2).join(""));
-    cardPhoto.append(artInitial);
-    setPhoto(cardPhoto, artist.portrait, `${artist.name}, tattoo artist`, "index-image");
-    card.append(cardPhoto);
-    const cardFoot = el("div", "index-foot");
-    const id = el("span", "index-num", artist.number);
-    const name = el("strong", "index-name", artist.name);
-    const arrow = el("span", "index-arrow", "↗"); arrow.setAttribute("aria-hidden", "true");
-    cardFoot.append(id, name, arrow); card.append(cardFoot); index.append(card);
-
-    const section = el("section", "artist-profile section-pad");
-    section.id = artist.id; section.setAttribute("aria-labelledby", `${artist.id}-heading`);
-    if (idx % 2 === 1) section.classList.add("profile-alt");
-    const wrap = el("div", "container");
-    const topline = el("div", "profile-rule");
-    topline.append(el("span", "section-kicker", `ARTIST PROFILE / ${artist.number}`), el("span", "profile-identifier", "H18 TATTOO COLLECTIVE"));
-    wrap.append(topline);
-    const layout = el("div", "profile-grid");
-    const visual = el("div", "profile-photo");
-    visual.append(el("span", "profile-photo-initial", artist.name.split(" ").map(s => s[0]).slice(0,2).join("")));
-    visual.append(el("span", "profile-photo-label", "ARTIST PORTRAIT / COMING SOON"));
-    setPhoto(visual, artist.portrait, `Portrait of ${artist.name}`, "portrait-img");
-    layout.append(visual);
-    const body = el("div", "profile-body");
-    body.append(el("p", "profile-role", artist.role));
-    const heading = el("h3", "profile-name", artist.name);
-    heading.id = `${artist.id}-heading`;
-    body.append(heading);
-    body.append(el("p", "profile-bio", artist.bio));
-    if (artist.specialties && artist.specialties.length) {
-      const tags = el("div", "tags");
-      artist.specialties.forEach(tag => tags.append(el("span", "tag", tag)));
-      body.append(tags);
-    }
-    const btns = el("div", "profile-buttons");
-    const bookingHref = artist.bookingUrl || `mailto:${contact}?subject=${encodeURIComponent(`Booking inquiry — ${artist.name}`)}`;
-    btns.append(link("BOOK WITH " + artist.name.split(" ")[0].toUpperCase() + " ↗", bookingHref, "btn btn-small btn-filled", bookingHref.startsWith("https://")));
-    if (artist.instagram) btns.append(link("INSTAGRAM ↗", artist.instagram, "btn btn-small btn-quiet", true));
-    body.append(btns);
-    const galleryHeader = el("div", "gallery-header");
-    galleryHeader.append(el("strong", "", "SELECTED WORK"), el("small", "PORTFOLIO / 03"));
-    body.append(galleryHeader);
-    const gallery = el("div", "work-grid");
-    for (let i = 0; i < 3; i++) {
-      const item = artist.work && artist.work[i];
-      if (item) {
-        const work = typeof item === "string" ? {src: item, alt: `Tattoo by ${artist.name}`} : item;
-        const button = el("button", "work-item work-photo");
-        button.type = "button"; button.setAttribute("aria-label", `View tattoo ${i+1} by ${artist.name}`);
-        const img = el("img", ""); img.src = work.src; img.alt = work.alt || `Tattoo by ${artist.name}`; img.loading = "lazy";
-        img.addEventListener("error", () => { button.replaceWith(makePlaceholder(i)); });
-        button.append(img);
-        button.addEventListener("click", () => {
-          lightboxImg.src = work.src;
-          lightboxImg.alt = work.alt || `Tattoo by ${artist.name}`;
-          lightboxCaption.textContent = artist.name + " / SELECTED WORK";
-          lightbox.showModal();
-        });
-        gallery.append(button);
-      } else gallery.append(makePlaceholder(i));
-    }
-    body.append(gallery);
-    layout.append(body); wrap.append(layout); section.append(wrap); profiles.append(section);
+    const section = document.createElement('article');
+    section.className = 'artist-profile';
+    section.id = artist.id;
+    section.innerHTML = `<div class="container profile-grid"><div class="profile-art reveal"><div class="profile-photo">${photoHtml}</div><span class="profile-photo-note">HANGER 18 / ARTIST 0${i+1}</span></div><div class="profile-copy reveal"><div class="profile-top"><span>ARTIST 0${i+1} / 0${data.artists.length}</span><span>${safe(artist.tag)}</span></div><h3>${safe(artist.name)}</h3><span class="profile-role">${safe(artist.role)}</span><div class="profile-bio">${artist.bio.map(p=>`<p>${safe(p)}</p>`).join('')}</div><div class="profile-links"><a class="button button-gold" href="${artistBooking(artist.name)}">BOOK WITH ${safe(artist.name.split(' ')[0]).toUpperCase()} <span aria-hidden="true">↗</span></a>${artist.instagram ? `<a class="inline-link" target="_blank" rel="noopener noreferrer" href="${safe(artist.instagram)}">INSTAGRAM ↗</a>` : ''}</div><div class="portfolio-heading"><strong>SELECTED WORK</strong><span>PORTFOLIO / 0${i+1}</span></div><div class="portfolio-grid">${photos}</div></div></div>`;
+    profiles.appendChild(section);
   });
 
-  function makePlaceholder(i) {
-    const tile = el("div", "work-item work-placeholder");
-    tile.append(el("span", "work-placeholder-symbol", "✳"), el("small", "WORK / 0" + (i + 1)));
-    return tile;
+  // Remote preview images can become unavailable. Display an honest fallback, not a broken icon.
+  document.querySelectorAll('.artist-card-photo img, .profile-photo img, .gallery-thumb img, .studio-work-grid img').forEach(image => {
+    image.addEventListener('error', () => {
+      const wrap = image.parentElement;
+      if (!wrap) return;
+      if (wrap.classList.contains('gallery-thumb')) {
+        wrap.setAttribute('disabled','');
+        wrap.removeAttribute('data-lightbox-src');
+      }
+      image.remove();
+      const fallback=document.createElement('div');
+      fallback.className='image-unavailable';
+      fallback.innerHTML='<span>PHOTO COMING SOON</span><small>See Instagram or ask the artist</small>';
+      wrap.prepend(fallback);
+    }, {once:true});
+  });
+
+  // Mobile navigation.
+  const nav = document.getElementById('main-nav');
+  const toggle = document.getElementById('menu-toggle');
+  if (nav && toggle) {
+    toggle.addEventListener('click', () => {
+      const isOpen = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!isOpen));
+      toggle.setAttribute('aria-label', isOpen ? 'Open navigation' : 'Close navigation');
+      nav.classList.toggle('nav-open', !isOpen);
+      document.body.classList.toggle('menu-open', !isOpen);
+    });
+    nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      nav.classList.remove('nav-open');
+      toggle.setAttribute('aria-expanded', 'false');
+      document.body.classList.remove('menu-open');
+    }));
   }
 
-  // Let anchor links and CSS handle scrolling. No JS frameworks or build steps required.
+  document.getElementById('year').textContent = String(new Date().getFullYear());
+
+  // Accessible gallery preview for when real portfolio images are uploaded.
+  const lightbox = document.getElementById('lightbox');
+  const close = document.getElementById('lightbox-close');
+  const img = document.getElementById('lightbox-image');
+  const caption = document.getElementById('lightbox-caption');
+  let lastTrigger;
+  profiles.addEventListener('click', ev => {
+    const trigger = ev.target.closest('[data-lightbox-src]');
+    if (!trigger) return;
+    lastTrigger = trigger;
+    img.src = trigger.dataset.lightboxSrc;
+    img.alt = trigger.dataset.lightboxAlt || '';
+    caption.textContent = img.alt;
+    if (typeof lightbox.showModal === 'function') lightbox.showModal();
+  });
+  close.addEventListener('click', () => lightbox.close());
+  lightbox.addEventListener('click', ev => { if (ev.target === lightbox) lightbox.close(); });
+  lightbox.addEventListener('close', () => {img.removeAttribute('src');lastTrigger?.focus();});
+
+  // Small reveal animation, disabled when users prefer reduced motion.
+  if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const observer = new IntersectionObserver((entries, o) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) { entry.target.classList.add('visible');o.unobserve(entry.target); }
+      });
+    }, {threshold:.08,rootMargin:'0px 0px 65px 0px'});
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  } else document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
 })();
