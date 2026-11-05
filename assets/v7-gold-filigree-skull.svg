@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 130" role="img" aria-label="Gold skull and ornamental scrollwork">
+<defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff4ce"/><stop offset=".4" stop-color="#d9ad5a"/><stop offset=".7" stop-color="#a8732c"/><stop offset="1" stop-color="#e9ca86"/></linearGradient></defs>
+<g fill="none" stroke="url(#g)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round">
+<path d="M24 66h176c25 0 30-38 4-38-19 0-18 23-3 25 32 4 53-42 99-36 38 5 49 40 80 39"/>
+<path d="M50 77h132c21 0 38 31 65 31 31 0 35-28 13-29-20 0-15 17-3 17"/>
+<path d="M69 53c31 1 38-27 56-24 15 3 10 19-2 17-11-2-11-10-6-14"/>
+<path d="M976 66H800c-25 0-30-38-4-38 19 0 18 23 3 25-32 4-53-42-99-36-38 5-49 40-80 39"/>
+<path d="M950 77H818c-21 0-38 31-65 31-31 0-35-28-13-29 20 0 15 17 3 17"/>
+<path d="M931 53c-31 1-38-27-56-24-15 3-10 19 2 17 11-2 11-10 6-14"/>
+<path d="M381 57h47m144 0h47" stroke-width="2.2"/>
+<path d="M425 50c-14-6-12-19-4-23 12-5 18 9 12 16M575 50c14-6 12-19 4-23-12-5-18 9-12 16" stroke-width="2"/>
+<path d="M424 78c-11 5-11 21-2 24 11 3 18-10 11-17m143-7c11 5 11 21 2 24-11 3-18-10-11-17" stroke-width="2"/>
+</g>
+<g transform="translate(455 12) scale(1.4)" fill="none" stroke="url(#g)" stroke-width="2" stroke-linejoin="round" stroke-linecap="round">
+<path d="M32 3C15 3 4 16 4 32c0 12 6 19 13 24v14h30V56c7-5 13-12 13-24C60 16 49 3 32 3Z"/>
+<path d="M16 29c3-6 12-8 18-2-1 13-9 18-18 10-2-2-2-5 0-8Zm32 0c-3-6-12-8-18-2 1 13 9 18 18 10 2-2 2-5 0-8ZM32 38l-5 9h10l-5-9Zm-15 17h30m-22 0v15m7-15v15m7-15v15"/>
+<path d="M12 16C20 5 42 5 51 16M22 8l-4-5m27 5 4-5" stroke-width="1"/>
+</g></svg>

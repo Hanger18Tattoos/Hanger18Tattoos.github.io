@@ -30,37 +30,64 @@
 @media(max-width:610px){.studio-work-grid{grid-template-columns:repeat(2,1fr);gap:9px}}
 
 
-/* --- V4 gold styling pass --- */
-
-:root{--gold-1:#f2e4b2;--gold-2:#ddb561;--gold-3:#b7852f;--gold-4:#6d4717;--wine:#4b180f;--wine-2:#2a0d08}
-.site-header{border-bottom:1px solid rgba(189,145,72,.45);box-shadow:0 12px 30px rgba(0,0,0,.16)}
-.wordmark{display:flex;align-items:center;max-width:240px}
-.wordmark img{display:block;width:100%;height:auto;filter:drop-shadow(0 6px 10px rgba(0,0,0,.35))}
-@media(max-width:610px){.wordmark{max-width:185px}}
-.hero-copy{background:radial-gradient(ellipse at 70% 5%,#2c2417 0%,#120f0c 42%,#080807 100%)}
-.hero-mark-container{max-width:410px;margin:0 auto 18px}
-.hero-mark{mix-blend-mode:normal;filter:drop-shadow(0 10px 20px rgba(0,0,0,.28)) saturate(1.02)}
-.hero h1,.headline{ text-shadow:0 10px 26px rgba(0,0,0,.22)}
-.hero h1 em,.headline span,.wordmark span,.kicker,.eyebrow,.visit-cell>span,.footer-list>span,.booking-side>span{background:linear-gradient(180deg,var(--gold-1) 0%,var(--gold-2) 38%,var(--gold-3) 74%,var(--gold-4) 100%);-webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:none}
-.hero-description,.booking-layout>div:first-child>p:not(.kicker):not(.small-note),.studio-primary p,.visit-header>p:not(.kicker),.artists-heading>p{color:#d0c7bb}
-.eyebrow-rule,.photo-dash{background:linear-gradient(90deg,var(--gold-4),var(--gold-2),var(--gold-1))}
-.main-nav .nav-book,.button-gold{background:linear-gradient(180deg,#f3df9a 0%,#ddb15b 38%,#bb8730 78%,#8c5c1d 100%);border-color:#f0db9f;color:#120b07;box-shadow:0 10px 24px rgba(0,0,0,.22), inset 0 1px 0 rgba(255,255,255,.35)}
-.main-nav .nav-book:hover,.button-gold:hover{background:linear-gradient(180deg,#f7e8bb 0%,#e6bf73 42%,#c69036 80%,#976523 100%);color:#0f0b08}
-.button-outline{border-color:#ae8241;background:linear-gradient(180deg,rgba(88,41,18,.22),rgba(20,12,8,.18))}
-.button-outline:hover{background:linear-gradient(180deg,rgba(121,57,25,.4),rgba(34,18,11,.45));border-color:#ddb561}
-.ticker{background:linear-gradient(90deg,#8d6328 0%,#d4ae62 18%,#efdca8 49%,#d4ae62 82%,#8d6328 100%)}
-.inline-link,.visit-cell>a,.footer-bottom a,.main-nav>a:hover{color:#e5be71}
-.inline-link{border-bottom-color:#7a592c}
-.artist-card:hover .artist-card-meta strong,.footer-list>a:hover{color:#e7c681}
-.booking{background:linear-gradient(115deg,#3a2618 0%,#1a120d 58%,#0d0b09 100%)}
-.hero-photo{background:#120f0d}
-.hero-photo img{filter:contrast(1.03) brightness(.88) saturate(1.02)}
-.hero-photo:after{background:linear-gradient(90deg,rgba(0,0,0,.1) 0%,transparent 40%),linear-gradient(0deg,rgba(0,0,0,.78),transparent 28%),linear-gradient(180deg,rgba(95,49,18,.08),transparent 20%)}
-.footer-brand img{max-width:280px;mix-blend-mode:normal;filter:drop-shadow(0 10px 18px rgba(0,0,0,.3))}
-.footer-brand p{color:#d4bc8d}
-.studio-work{background:linear-gradient(180deg,#13100d 0%,#17120e 100%)}
-.studio-work-grid a span{color:#f4d79c}
-
-
-/* --- V5 polish / glitch fix --- */
-:root{--gold-1:#fff2c7;--gold-2:#f0c86e;--gold-3:#cb9638;--gold-4:#7c4f18;--gold-shadow:#2b1608}\n.wordmark{max-width:220px;min-width:160px}\n.wordmark img{width:100%;height:auto;object-fit:contain}\n@media(max-width:610px){.wordmark{max-width:170px}}\n.hero-copy-inner{padding-top:54px}\n.hero-mark-container{display:none!important}\n.hero-ornament{display:flex;align-items:center;gap:12px;margin:6px 0 18px;max-width:270px}\n.hero-ornament span{height:1px;flex:1;background:linear-gradient(90deg,transparent,var(--gold-2),transparent)}\n.hero-ornament b{font:700 20px/1 "Cinzel Decorative", serif;background:linear-gradient(180deg,var(--gold-1) 0%,var(--gold-2) 38%,var(--gold-3) 74%,var(--gold-4) 100%);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 2px 4px rgba(0,0,0,.45))}\n.hero h1,.headline,.profile-copy h3{font-family:"Cinzel Decorative","Cinzel",serif;letter-spacing:.01em;text-transform:uppercase}\n.hero h1{font-size:clamp(40px,4.6vw,75px);line-height:.98;background:linear-gradient(180deg,var(--gold-1) 0%,#f4d889 18%,var(--gold-2) 38%,var(--gold-3) 68%,var(--gold-4) 100%);-webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:none;filter:drop-shadow(0 3px 6px rgba(0,0,0,.26))}\n.hero h1 em,.headline span,.profile-copy h3,.artist-card-meta strong{font-family:"Cinzel Decorative","Cinzel",serif;background:linear-gradient(180deg,var(--gold-1) 0%,#f4d889 18%,var(--gold-2) 38%,var(--gold-3) 68%,var(--gold-4) 100%);-webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:none}\n.headline{line-height:1.03;font-size:clamp(42px,5.3vw,82px);background:linear-gradient(180deg,var(--gold-1) 0%,#f2d281 24%,var(--gold-2) 44%,var(--gold-3) 76%,var(--gold-4) 100%);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 2px 5px rgba(0,0,0,.22))}\n.kicker,.eyebrow{font-weight:700;position:relative}\n.kicker::after{content:"☠";display:inline-block;margin-left:8px;font-size:11px;background:linear-gradient(180deg,var(--gold-1) 0%,var(--gold-2) 50%,var(--gold-4) 100%);-webkit-background-clip:text;background-clip:text;color:transparent}\n.artist-card-meta strong{font-size:27px}\n.button-gold,.main-nav .nav-book{background:linear-gradient(180deg,#fff3cc 0%,#f0c96f 26%,#d8a64a 56%,#b17a2d 85%,#7a4e17 100%);border:1px solid rgba(255,228,170,.85);box-shadow:0 8px 22px rgba(0,0,0,.35), inset 0 1px 0 rgba(255,255,255,.42), inset 0 -1px 0 rgba(88,49,14,.42);color:#120b07}\n.main-nav .nav-book:hover,.button-gold:hover{background:linear-gradient(180deg,#fff8dc 0%,#f5d889 26%,#e2b65a 58%,#bf8733 86%,#86561b 100%)}\n.hero-photo{padding:18px 18px 0 18px;background:linear-gradient(180deg,#080807 0%,#0f0d0b 100%)}\n.hero-photo picture{display:flex;align-items:flex-end;justify-content:center}\n.hero-photo img{width:100%;height:100%;object-fit:contain;object-position:center bottom;filter:contrast(1.03) brightness(.97) saturate(1.03)}\n.hero-photo:after{background:linear-gradient(90deg,rgba(0,0,0,.08) 0%,transparent 26%),linear-gradient(0deg,rgba(0,0,0,.6),transparent 22%)}\n.hero-photo figcaption{left:28px;bottom:24px}\n.site-header{background:#090908f2}\n.footer-brand img{background:#000;border-radius:6px;padding:8px;max-width:255px}\n.footer-brand p{letter-spacing:.18em}\n.aside-top span:last-child{font-size:18px}\n@media(max-width:860px){.hero{grid-template-columns:1fr}.hero-copy-inner{padding-top:38px}.hero-photo{height:auto;min-height:420px;padding:0 20px 0 20px}.hero-photo img{height:auto;max-height:70svh}.hero-photo figcaption{left:18px;bottom:14px}}\n@media(max-width:610px){.hero h1{font-size:clamp(32px,10.2vw,52px)}.headline{font-size:clamp(36px,11vw,56px)}.hero-ornament{margin-bottom:15px}.hero-photo{min-height:0;padding:0 14px}.kicker::after{font-size:10px}}
+/* V6: fixed header, one gold logo, user-approved real storefront, engraved-gold headings */
+:root{--gold:#dcb96e;--gold-d:#a87935;--gold-light:#f5e8bb;--gold-mid:#daa747;--gold-deep:#80501b}
+/* Keep the brand permanently at the top-left, not scrolling with content. */
+.site-header{position:fixed;top:0;left:0;right:0;z-index:100;height:92px;background:rgba(8,7,6,.98);border-bottom:1px solid #4c3921;box-shadow:0 10px 22px #0007}
+.announcement{margin-top:92px}
+.nav-shell{height:100%;gap:22px}
+.wordmark{flex:0 0 auto;width:152px;height:88px;display:flex;align-items:center;justify-content:flex-start;white-space:normal}
+.wordmark img{max-width:152px;max-height:86px;width:100%;height:auto;object-fit:contain;filter:drop-shadow(0 3px 5px #0008)}
+.main-nav{gap:clamp(16px,2.8vw,36px)}
+.main-nav>a{white-space:nowrap}
+.main-nav .nav-book{border:1px solid #cda252;background:linear-gradient(180deg,#251a10,#0a0908);color:#e5c887}
+.main-nav .nav-book:hover{background:#d6a449;color:#0a0908}
+/* The other logo is removed in HTML; do not re-introduce a hero mark. */
+.hero{min-height:700px;grid-template-columns:50% 50%}
+.hero-copy{background:radial-gradient(ellipse at 45% 8%,#23190e 0%,#100e0a 46%,#090807 95%)}
+.hero-copy-inner{padding-top:65px;padding-bottom:95px}
+.hero h1,.headline{font-family:'Cinzel',Georgia,serif;letter-spacing:-.028em;line-height:1.03;font-weight:800;text-shadow:none}
+.hero h1{font-size:clamp(38px,4.05vw,68px);margin-bottom:27px;max-width:680px}
+.headline{font-size:clamp(39px,5.15vw,76px);line-height:1.06;max-width:900px}
+/* Fine metallic shading rather than the poster's fake extruded chrome. */
+.hero h1 em,.headline span,.profile-copy h3{font-style:normal;background:linear-gradient(180deg,#fff2c9 1%,#f5e4ad 19%,#e8bc65 38%,#a76d29 55%,#f3d995 72%,#a16b25 100%);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 2px 2px #0009)}
+.kicker,.eyebrow{color:#e9c57c}
+.gold-ornament{display:flex;align-items:center;gap:15px;width:175px;height:36px;margin:0 0 12px}
+.gold-ornament span{height:1px;flex:1;background:linear-gradient(90deg,transparent,#bd9150,transparent)}
+.gold-ornament img{width:29px;height:29px;opacity:.82}
+.button-gold{background:linear-gradient(180deg,#fff0c2 0%,#e5bf6d 36%,#bf8836 74%,#936026 100%);color:#181006;border:1px solid #edd093;box-shadow:inset 0 1px 0 #fff7d599,0 8px 25px #0006}
+.button-gold:hover{background:linear-gradient(180deg,#fff7d6,#ecc773 55%,#be8739)}
+.ticker{background:linear-gradient(90deg,#ad833d,#ecd18c 48%,#ac7c33);color:#1b1107}
+.footer-brand strong{font-family:'Cinzel',Georgia,serif;display:block;font-size:clamp(27px,3vw,43px);color:#edd6a2;line-height:1.1}
+.footer-brand strong span{color:#bd8b3f}
+.footer-brand p{margin-top:12px}
+/* Show the supplied photograph IN FULL, not the old light storefront crop. */
+.hero-photo{background:#0d0d0c;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.hero-photo>img{display:block;width:100%;height:100%;max-height:840px;object-fit:contain;object-position:center center;filter:none;transform:none;transition:none}
+.hero-photo:hover>img{transform:none}
+.hero-photo:after{background:linear-gradient(0deg,rgba(0,0,0,.58),transparent 19%)}
+.hero-photo figcaption{bottom:22px;left:26px;right:15px}
+@media(max-width:1200px){.hero h1{font-size:clamp(33px,4.1vw,56px)}.nav-shell{width:calc(100% - 50px)}.main-nav{gap:22px}}
+@media(max-width:860px){
+ .site-header{height:82px}.announcement{margin-top:82px}.nav-shell{width:calc(100% - 36px)}
+ .wordmark{height:78px;width:133px}.wordmark img{max-width:133px;max-height:75px}
+ .main-nav{top:82px;gap:22px}.main-nav>a{white-space:normal}
+ .hero{grid-template-columns:1fr;min-height:0}
+ .hero-copy-inner{padding:38px 35px 44px;text-align:center}
+ .gold-ornament{margin:0 auto 12px}
+ .hero h1{font-size:clamp(38px,6.9vw,59px);margin-inline:auto}
+ .hero-photo{height:auto;min-height:0;padding:0;background:#090908}
+ .hero-photo>img{width:auto;max-width:100%;height:auto;max-height:650px;object-fit:contain}
+ .hero-photo figcaption{bottom:15px;left:17px}
+}
+@media(max-width:610px){
+ .wordmark{width:117px;height:76px}.wordmark img{max-width:117px;max-height:72px}
+ .hero-copy-inner{padding:30px 22px 39px}
+ .hero h1{font-size:clamp(33px,9.3vw,49px);line-height:1.08;letter-spacing:-.025em}
+ .headline{font-size:clamp(35px,9.7vw,55px);line-height:1.1;letter-spacing:-.028em}
+ .hero-photo{height:auto}
+ .hero-photo>img{width:100%;height:auto;max-height:670px}
+ .hero-photo figcaption{font-size:8px;bottom:12px;letter-spacing:.07em}
+ .gold-ornament{height:26px;margin-bottom:12px}
+ .gold-ornament img{width:23px;height:23px}
+}
