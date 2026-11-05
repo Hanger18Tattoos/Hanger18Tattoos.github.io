@@ -1,7 +1,17 @@
-HANGER 18 TATTOOS — V8 BIKER-CUT
+# Hanger 18 Tattoos • V9
 
-Site uses real HTML text, CSS styles, and clickable anchor/book buttons, not a flattened Photoshop image. Header logo stays fixed.
+## What changed
+- The new hero uses **two gold lettering assets and filigree cut out from Glen’s approved Photoshop mockup**, not the complete mockup image.
+- Everything below the lettering is HTML: description, booking buttons, navigation, artist cards, contact links.
+- The header contains one fixed logo.
+- The shop picture uses the approved edited storefront photo.
+- The five artists and their gallery data remain in `site-data.js`.
 
-GitHub Pages setup: main branch, /docs directory. Upload the docs directory into your existing Hanger18Tattoos.github.io repository.
+## Publishing to existing GitHub Pages
+Upload the `docs` folder to repository root on `Hanger18Tattoos/Hanger18Tattoos.github.io`, committing changed files. Pages: `main` branch, `/docs` folder.
 
-Contact: hanger18tattoos@hotmail.com. Original website and DNS unchanged.
+## Assets
+`assets/v9-photoshop-signature.webp` and `assets/v9-photoshop-tagline.webp` are extracted visual lettering only. Change photos/artist profiles using `site-data.js`.
+
+## Important
+Legacy gallery image URLs still refer to the old website and need local copies before changing domain DNS.
