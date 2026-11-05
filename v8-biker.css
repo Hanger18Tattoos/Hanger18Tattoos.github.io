@@ -1,0 +1,69 @@
+
+/* V8: biker-cut typography, still HTML text and real clickable links. */
+:root{--biker-font:'Sancreek','Rye',Georgia,serif;--cutgold:#e9bd67}
+/* Three-dimensional effect without image lettering. No Cinzel Decorative, no gothic fantasy flourishes. */
+.site-header{height:170px;}
+.announcement{margin-top:170px;}
+.nav-shell{width:min(1440px,calc(100% - 64px));gap:32px;}
+.wordmark{width:330px;min-width:330px;height:168px;display:flex;align-items:center;justify-content:flex-start;}
+.wordmark img{width:330px;max-width:330px;height:166px;max-height:166px;object-fit:contain;}
+.main-nav{gap:clamp(15px,2.4vw,36px);}
+.hero{min-height:730px;}
+.hero-copy-inner{padding-top:70px;padding-bottom:68px;padding-left:max(50px,calc((100vw - 1340px)/2));padding-right:clamp(30px,3.7vw,60px);}
+.hero-copy::before{inset:20px 15px;border-color:rgba(203,156,70,.35)}
+.hero-copy::after{opacity:.35;width:70px;height:70px}
+.biker-hero-brand{display:flex;flex-direction:column;align-items:center;text-align:center;line-height:.91;margin:18px 0 16px;letter-spacing:.005em;transform:skew(-1deg);}
+.biker-brand-top,.biker-brand-bottom{display:block;width:100%;font-family:var(--biker-font);font-weight:400;background:linear-gradient(180deg,#fff5d9 3%,#f2cd7c 18%,#c88a2a 41%,#ffe3a0 52%,#bf812d 70%,#7b4a18 95%);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(1px 2px 0 #3c240d) drop-shadow(2px 4px 1px #060504);-webkit-text-stroke:.65px #bb8d44;text-shadow:none;}
+.biker-brand-top{font-size:clamp(45px,5vw,79px);white-space:nowrap;}
+.biker-brand-top b{font-weight:400;font-size:1.06em;}
+.biker-brand-bottom{font-size:clamp(52px,5.6vw,92px);letter-spacing:.035em;white-space:nowrap;}
+.biker-divider{display:flex;align-items:center;justify-content:center;gap:15px;color:#d4a757;margin:13px auto 25px;max-width:445px;}
+.diamond-rule{height:2px;min-width:24px;flex:1;background:linear-gradient(90deg,transparent,#d8b068 50%,transparent);position:relative;}
+.diamond-rule:after{content:'';width:8px;height:8px;background:#ddbc72;transform:rotate(45deg);position:absolute;top:-3px;left:calc(50% - 4px);box-shadow:0 0 10px #d6a55c66;}
+.hero h1.hero-subtitle{font:500 clamp(20px,1.9vw,32px)/1.25 'Rye',Georgia,serif;letter-spacing:.045em;text-align:center;margin:0 auto 26px;filter:none;background:none;color:#e7bd73;-webkit-text-stroke:0;}
+.hero h1.hero-subtitle span{display:block;color:#ecd3a0;background:none;-webkit-background-clip:unset;background-clip:unset;text-shadow:0 2px 4px #000;}
+.hero h1.hero-subtitle span:nth-child(2){font:600 clamp(13px,1.25vw,19px)/2 'DM Sans',Arial,sans-serif;letter-spacing:.27em;color:#ede3d4;}
+.hero-description{text-align:center;max-width:515px;margin:0 auto 29px;font-size:14px;line-height:1.72;}
+.hero-actions{justify-content:center;}
+.eyebrow{justify-content:center;}
+/* Outer section headings: cut serif display, not decorative Harry Potter style. */
+.headline,.headline span,.profile-copy h3{font-family:var(--biker-font);font-weight:400;letter-spacing:.015em;line-height:1.13;}
+.headline{font-size:clamp(35px,4.8vw,69px);}
+.profile-copy h3{font-size:clamp(39px,4.4vw,73px);}
+#studio-title .studio-script{font-family:var(--biker-font);font-size:inherit;line-height:inherit;text-transform:uppercase;letter-spacing:.015em;padding-right:0;}
+.studio-signature{display:none;}
+.artist-card-meta strong{font-family:var(--biker-font);letter-spacing:.015em;}
+/* keep small decorative elements, not oversized fantasy scrollwork */
+.ornate-divider{height:45px;}
+.ornate-divider img{height:50px;max-width:450px;opacity:.6;}
+.gold-ornament.gold-ornament-hero{display:none;}
+@media(max-width:1200px){
+ .site-header{height:135px}.announcement{margin-top:135px}
+ .wordmark{width:255px;min-width:255px;height:133px}.wordmark img{width:255px;max-width:255px;height:132px;max-height:132px}
+ .hero-copy-inner{padding-left:35px;padding-right:35px}
+ .biker-brand-top{font-size:clamp(44px,4.8vw,65px)}.biker-brand-bottom{font-size:clamp(46px,5.2vw,74px)}
+}
+@media(max-width:860px){
+ .site-header{height:106px}.announcement{margin-top:106px}
+ .wordmark{width:205px;min-width:205px;height:104px}.wordmark img{width:205px;max-width:205px;height:103px;max-height:103px}
+ .main-nav{top:106px}
+ .hero-copy-inner{padding:68px 35px 55px}
+ .biker-brand-top{font-size:clamp(49px,8.3vw,77px)}.biker-brand-bottom{font-size:clamp(51px,9.5vw,86px)}
+ .hero h1.hero-subtitle{font-size:clamp(22px,3.3vw,31px)}
+ .hero h1.hero-subtitle span:nth-child(2){font-size:clamp(13px,1.8vw,16px)}
+}
+@media(max-width:610px){
+ .site-header{height:88px}.announcement{margin-top:88px}
+ .wordmark{width:162px;min-width:162px;height:86px}.wordmark img{width:162px;max-width:162px;height:86px;max-height:86px}
+ .main-nav{top:88px}
+ .hero-copy-inner{padding:57px 27px 51px}
+ .biker-hero-brand{margin:18px auto 12px;}
+ .biker-brand-top{font-size:clamp(35px,9.1vw,55px)}.biker-brand-bottom{font-size:clamp(40px,10.2vw,61px)}
+ .hero h1.hero-subtitle{font-size:clamp(18px,5vw,25px);line-height:1.25}
+ .hero h1.hero-subtitle span:nth-child(2){font-size:clamp(11px,2.7vw,14px);letter-spacing:.16em;line-height:1.9}
+ .biker-divider{margin:15px auto 19px;max-width:310px}
+ .biker-divider svg{width:40px;height:37px}
+ .hero-description{font-size:13px;line-height:1.65}
+ .headline{font-size:clamp(32px,8.5vw,48px)}
+ .profile-copy h3{font-size:clamp(37px,9.3vw,55px)}
+}
