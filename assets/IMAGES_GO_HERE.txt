@@ -1,0 +1,1 @@
+Place approved Hanger 18 studio and artist images here. Use .jpg or .webp and update site-data.js.
