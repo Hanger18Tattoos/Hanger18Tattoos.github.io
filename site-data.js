@@ -45,7 +45,7 @@ window.H18 = {
     {
       id:'ryan-neeb',name:'Ryan Neeb',initials:'RN',role:'TATTOO ARTIST',tag:'PORTFOLIO IN PROGRESS',
       bio:['The full artist bio and selected tattoo work are being prepared. In the meantime, follow Ryan’s work through the Instagram link below.'],
-      portrait:'',instagram:'https://www.instagram.com/ryanneebtattooer/',gallery:[]
+      portrait:'',instagram:'https://www.instagram.com/ryanneebtattoo/',gallery:[]
     }
   ]
 };
