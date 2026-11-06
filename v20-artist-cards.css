@@ -1,0 +1,19 @@
+/* V20: all five directory portraits in black & grey.
+   Artist profiles and tattoo portfolios retain their original colour.
+   This stylesheet loads last to override the V17 Sammy/Ryan card override. */
+
+/* Keep the artist directory visually consistent, including on hover. */
+#artist-directory .artist-card .artist-card-photo > img,
+#artist-directory .artist-card:hover .artist-card-photo > img,
+#artist-directory .artist-card:focus-visible .artist-card-photo > img {
+  filter: grayscale(100%) contrast(1.04) !important;
+}
+
+/* These are separate original-colour portraits further down the page. */
+#artist-profiles .artist-profile .profile-photo > img {
+  filter: none;
+}
+#artist-profiles #sammy .profile-photo > img,
+#artist-profiles #ryan-neeb .profile-photo > img {
+  filter: saturate(.82) contrast(1.05);
+}

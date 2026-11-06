@@ -1,4 +1,18 @@
-V18 FULL RELEASE — Updated 2026-11-06
-All 40 original tattoo photos are unchanged. The gold hero title now blends over the filigree, the divider is narrower, and the studio has a soft backdrop created from the approved storefront image.
+HANGER 18 TATTOOS — VERSION 20 — COMPLETE GITHUB PAGES WEBSITE
 
-V17: Unzip and upload full docs/ folder into ROOT of Hanger18Tattoos/Hanger18Tattoos.github.io. Confirm docs/index.html, docs/site-data.js, docs/artists/*.html, docs/sitemap.xml, and docs/assets/* appear. Commit to main. Pages main /docs. See README.md for domain and Google SEO actions.
+CHANGE IN VERSION 20
+Sammy and Ryan artist directory photos now display in black & grey, matching Sean, Dave and Glen. The full artist profile photos and all tattoo portfolio pictures are still in colour. No originals were altered.
+
+TO UPDATE
+1. Unzip this download.
+2. Open the Hanger18Tattoos.github.io repository on GitHub.
+3. Upload everything INSIDE the docs folder from this ZIP into the EXISTING docs folder in your repo, replacing same-named files.
+   Keep paths such as docs/index.html, docs/app.js, docs/site-data.js, docs/v20-artist-cards.css and docs/assets/.
+4. Commit the changes to main.
+5. Confirm repository Settings > Pages is configured to serve from main / docs.
+6. Load https://hanger18tattoos.github.io/ and hard refresh (Mac: Command+Shift+R).
+
+Do not nest another docs folder inside docs. Other artists' original photos and source assets are preserved.
+
+SEO metadata, robot rules, artist detail pages, sitemap, and all existing content retained from V19.
+This is a GitHub Pages prelaunch preview: existing external images from the old shop domain may need local copies before migration.
