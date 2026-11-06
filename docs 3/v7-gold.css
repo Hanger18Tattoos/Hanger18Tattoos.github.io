@@ -1,0 +1,66 @@
+/* Hanger 18 / V7 filigree and gold typography */
+:root {--gold:#e3be73;--gold-light:#fff0be;--gold-mid:#d9aa54;--gold-deep:#81521d;--frame:#80602d;--head:"Cinzel",Georgia,serif;--script:"Great Vibes",cursive;}
+body{background:#090807;background-image:radial-gradient(ellipse 70% 1000px at 5% 10%,rgba(130,77,23,.065),transparent 70%)}
+/* Lock down one single logo, in the sticky header. */
+.site-header{height:92px;position:fixed;left:0;right:0;top:0;z-index:100;background:rgba(6,6,6,.97);border-bottom:1px solid rgba(185,136,58,.55);box-shadow:0 10px 36px #0008;backdrop-filter:blur(14px)}
+.announcement{margin-top:92px}.wordmark{width:166px;min-width:166px;height:85px;display:flex;align-items:center}.wordmark img{display:block;width:100%;max-width:166px;height:83px;object-fit:contain}
+.nav-shell{gap:32px}.main-nav{gap:clamp(15px,2.3vw,32px)}
+.main-nav>a{font-size:10px}.main-nav .nav-book{border:1px solid #c1954c;box-shadow:inset 0 0 0 2px #0e0b08,0 0 0 1px #4d371a;background:linear-gradient(180deg,#312010,#0f0a08);color:#edd59b;letter-spacing:.09em;padding:14px 16px}
+/* Original two column layout retained. Hero framed without occupying the header. */
+.hero{grid-template-columns:minmax(0,1fr) minmax(0,1fr);min-height:680px}
+.hero-copy{position:relative;min-width:0;background:radial-gradient(ellipse at 40% 18%,#28190d 0,#100d09 50%,#090807 100%)}
+.hero-copy::before{content:"";position:absolute;inset:23px 22px 37px;border:1px solid rgba(192,148,75,.32);box-shadow:inset 0 0 0 6px rgba(0,0,0,.2);pointer-events:none}
+.hero-copy::after{content:"";pointer-events:none;position:absolute;top:26px;left:25px;width:86px;height:86px;background:url("assets/v7-gold-corner.svg") top left/contain no-repeat;opacity:.54}
+.hero-copy-inner{position:relative;z-index:2;padding:62px clamp(35px,4vw,85px) 88px max(50px,calc((100vw - var(--container))/2));}
+.gold-ornament.gold-ornament-hero{height:62px;width:min(360px,100%);margin:0 0 13px}
+.gold-ornament.gold-ornament-hero img{width:100%;height:100%;opacity:.9;object-fit:contain}
+.hero h1{font-family:"Cinzel Decorative",'Cinzel',Georgia,serif;font-weight:700;font-size:clamp(34px,3.6vw,61px);line-height:1.06;letter-spacing:-.023em;filter:none;text-shadow:0 3px 2px #0008;margin-bottom:27px;max-width:740px}
+.hero h1 em,.hero h1{background:linear-gradient(180deg,#fff2c5 2%,#f4d993 23%,#c88b34 48%,#f1d186 69%,#976322 94%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero h1 em{font-style:normal;font-family:"Cinzel Decorative",'Cinzel',serif}
+.hero-description{color:#cfc5b6;font-size:14px;line-height:1.83}
+.hero-actions{gap:17px}.button-gold{background:linear-gradient(180deg,#f8e5ae,#d9ac59 43%,#9f6725 95%);box-shadow:inset 0 1px 0 #fff7de85,inset 0 0 0 2px #2c1a0c,0 8px 24px #0008;border:1px solid #c99b4e;color:#160e07}
+.button-outline{border-color:#9f7132}
+.hero-photo{background:#090909;overflow:hidden}.hero-photo>img{width:100%;height:100%;max-height:900px;object-fit:contain;object-position:center center;filter:none!important;transform:none!important}
+.hero-photo:after{background:linear-gradient(0deg,rgba(0,0,0,.7),transparent 18%)}
+.hero-photo figcaption{bottom:23px}
+/* Ornamental separators, original section content unchanged. */
+.ornate-divider{height:72px;display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg,#0b0a08,#100d0a);border-top:1px solid #443117;border-bottom:1px solid #352612;overflow:hidden}
+.ornate-divider img{width:min(680px,86vw);height:76px;object-fit:contain;opacity:.65}
+.ornate-divider-soft{height:54px;background:#0c0b09}
+.ornate-divider-soft img{height:57px;opacity:.5}
+.headline{font-family:'Cinzel',Georgia,serif;font-weight:700;letter-spacing:-.038em;line-height:1.08;font-size:clamp(43px,5.4vw,78px);filter:none}
+.headline,.headline span,.profile-copy h3{background:linear-gradient(180deg,#fff1c1 0%,#e6c67e 27%,#c58b34 52%,#f0cd81 70%,#9d6d2b 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+#studio-title .studio-script{display:inline-block;font:400 clamp(61px,7vw,104px)/1.05 var(--script);text-transform:none;letter-spacing:-.01em;padding-right:10px;vertical-align:baseline}
+.studio-signature{margin-top:21px;display:flex;align-items:baseline;gap:13px;color:#e8c981;font-family:"Cinzel Decorative",serif;font-size:18px;letter-spacing:.08em}
+.studio-signature em{font-family:var(--script);font-size:42px;line-height:1.1;letter-spacing:0}
+/* Gold frame details, not full-page gold-plated excess. */
+.studio-aside{position:relative;border:1px solid #8a6836;box-shadow:inset 0 0 0 5px #1c1711, inset 0 0 0 6px #79592e,0 18px 45px #0005;background:radial-gradient(circle at 60% 0%,#322414,#110e0b 66%)}
+.studio-aside:before,.booking-side:before{content:"";position:absolute;top:7px;left:7px;width:60px;height:60px;background:url("assets/v7-gold-corner.svg") left top/contain no-repeat;opacity:.57;pointer-events:none}
+.aside-big{color:#dcbc73;text-shadow:0 3px 0 #3b2610}
+.artist-directory{gap:16px}.artist-card{position:relative;padding:7px 7px 13px;border:1px solid rgba(137,99,42,.52);background:linear-gradient(180deg,#19130d,#0a0908);box-shadow:0 16px 27px #0006, inset 0 0 0 3px #0c0b09}
+.artist-card:before{content:"";position:absolute;left:0;top:0;width:47px;height:47px;background:url("assets/v7-gold-corner.svg") left top/contain no-repeat;z-index:4;opacity:.78;pointer-events:none}
+.artist-card-photo{border:1px solid rgba(216,165,81,.48)}
+.artist-card-meta{padding:16px 8px 0}
+.artist-card-meta strong{font-family:"Cinzel",Georgia,serif;font-size:clamp(15px,1.5vw,22px);color:#ead3a3;text-transform:uppercase;letter-spacing:-.04em;line-height:1.22}
+.artist-card:hover{border-color:#debd77;box-shadow:0 16px 34px #0009,0 0 0 1px #b98a43}
+.artist-card:hover .artist-card-meta strong{color:#fff0ca}
+.artist-card-n{color:#efd8a8;text-shadow:0 2px 4px #000}
+.profile-grid{border-bottom:1px solid #49341d}
+.profile-photo{border:1px solid #906936;box-shadow:0 0 0 5px #0c0b09,0 0 0 6px #694e29}
+.profile-copy h3{font-family:"Cinzel Decorative",Georgia,serif;letter-spacing:-.025em;font-size:clamp(44px,4.9vw,82px)}
+.portfolio-grid{gap:10px}.portfolio-placeholder,.gallery-thumb{border:1px solid #6b4e27;box-shadow:inset 0 0 0 4px #14110e, inset 0 0 0 5px #594020}
+.studio-work{background:radial-gradient(circle at 35% 0%,#21180e,#0d0c0b 72%)}
+.studio-work-grid{gap:14px}.studio-work-grid a{border:1px solid #9a743c;padding:5px;background:#080808;box-shadow:inset 0 0 0 1px #6b4e2b,0 9px 22px #0006}
+.studio-work-grid a:after{content:"";position:absolute;top:5px;left:5px;width:40px;height:40px;background:url("assets/v7-gold-corner.svg") left top/contain no-repeat;opacity:.72;pointer-events:none}
+.studio-work-grid img{filter:brightness(.9) contrast(1.02)}
+.booking{position:relative;background:radial-gradient(ellipse at 5% 30%,#382517 0%,#130e0a 65%,#080807 100%)}
+.booking:before{content:"";position:absolute;inset:20px 20px;border:1px solid rgba(175,126,54,.33);pointer-events:none}
+.booking-side{position:relative;padding-top:48px}.booking-side:before{left:27px;top:-3px;width:61px;height:61px}
+.footer-brand .footer-typeset-brand{display:flex;align-items:baseline;gap:13px;flex-wrap:wrap;font-weight:400}
+.footer-brand .footer-hanger{font-family:"Cinzel Decorative",Georgia,serif;font-size:clamp(25px,2.5vw,38px);background:linear-gradient(#fff0c0,#c99b43 60%,#99662a);-webkit-background-clip:text;background-clip:text;color:transparent}
+.footer-brand .footer-eighteen{font-family:var(--script);text-transform:none;font-size:clamp(42px,4vw,64px);font-weight:400;letter-spacing:0;line-height:1;background:linear-gradient(#fff1c6,#bc8b3b 86%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.footer-brand p{font:500 11px 'DM Sans',sans-serif;color:#ad9364;letter-spacing:.16em;margin-top:14px}
+/* Always keep logo/nav legible and gold decoration restrained on phones. */
+@media(max-width:1200px){.hero h1{font-size:clamp(34px,3.7vw,54px)}.artist-card-meta strong{font-size:19px}.hero-copy-inner{padding-left:35px;padding-right:35px}}
+@media(max-width:860px){.site-header{height:82px}.announcement{margin-top:82px}.wordmark{height:78px;width:133px;min-width:133px}.wordmark img{max-width:133px;max-height:74px}.main-nav{top:82px}.hero{grid-template-columns:1fr}.hero-copy-inner{padding:68px 35px 56px;text-align:center}.hero-copy:before{inset:24px}.hero-copy:after{top:26px;left:26px}.gold-ornament.gold-ornament-hero{margin:0 auto 15px}.hero h1{font-size:clamp(38px,6.3vw,58px)}.hero-photo{padding:0;height:auto}.hero-photo>img{width:auto;max-width:100%;height:auto;max-height:620px}.studio-signature{justify-content:center}.artist-card-meta strong{font-size:18px}.ornate-divider{height:58px}.ornate-divider img{height:59px}.footer-brand .footer-typeset-brand{justify-content:flex-start}}
+@media(max-width:610px){.site-header{height:78px}.announcement{margin-top:78px}.wordmark{height:74px;width:119px;min-width:119px}.wordmark img{max-width:119px;max-height:70px}.main-nav{top:78px}.hero-copy-inner{padding:57px 31px 48px}.hero-copy:before{inset:16px}.hero-copy:after{top:16px;left:16px;width:54px;height:54px;opacity:.5}.hero h1{font-size:clamp(31px,8.5vw,49px);line-height:1.11}.hero-description{font-size:13px}.gold-ornament.gold-ornament-hero{height:44px}.gold-ornament.gold-ornament-hero img{height:44px}.hero-photo>img{width:100%;height:auto}.hero-photo figcaption{bottom:13px;font-size:8px}.headline{font-size:clamp(37px,9.3vw,54px)}#studio-title .studio-script{font-size:clamp(60px,15vw,88px)}.studio-signature em{font-size:36px}.artist-card{padding:5px 5px 12px}.artist-card-meta{padding:12px 4px 0}.artist-card-meta strong{font-size:clamp(14px,4vw,20px)}.artist-card:before{width:35px;height:35px}.studio-work-grid{gap:9px}.studio-work-grid a{padding:3px}.booking:before{inset:11px}.booking-layout{padding:8px}.ornate-divider{height:48px}.ornate-divider img{height:52px}}

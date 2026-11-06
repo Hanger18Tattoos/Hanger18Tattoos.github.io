@@ -1,0 +1,31 @@
+/* V12: Updated steel storefront and premium skull-and-filigree section dividers.
+   Keep V11 hero layout, title, buttons, profiles and copy untouched. */
+.ornate-divider,
+.ornate-divider.ornate-divider-soft {
+  height:clamp(98px,12vw,166px) !important;
+  min-height:98px !important;
+  padding:12px 0 !important;
+  border-top:1px solid rgba(185,139,73,.28);
+  border-bottom:1px solid rgba(185,139,73,.24);
+  background:linear-gradient(180deg,#070605,#110c08 50%,#090806);
+  overflow:hidden;
+  display:flex;align-items:center;justify-content:center;
+}
+.ornate-divider img,
+.ornate-divider.ornate-divider-soft img {
+  width:min(1000px,94vw) !important;
+  max-width:100%;
+  height:100% !important;
+  object-fit:contain;
+  display:block;
+  opacity:1 !important;
+  filter:drop-shadow(0 4px 15px rgba(0,0,0,.66));
+}
+@media(max-width:860px){
+ .ornate-divider,.ornate-divider.ornate-divider-soft{height:clamp(85px,14vw,125px)!important;min-height:85px!important;padding:7px 0!important}
+ .ornate-divider img,.ornate-divider.ornate-divider-soft img{width:95vw!important}
+}
+@media(max-width:560px){
+ .ornate-divider,.ornate-divider.ornate-divider-soft{height:86px!important;min-height:86px!important;padding:5px 0!important}
+ .ornate-divider img,.ornate-divider.ornate-divider-soft img{width:98vw!important}
+}

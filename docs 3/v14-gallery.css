@@ -1,0 +1,9 @@
+/* V14 artist update: full untouched Glen photo gallery and film-grain portrait. */
+#artists .artist-card[href="#glen-hartless"] .artist-card-photo img,
+#glen-hartless .profile-photo img {object-position:center 24%;}
+#glen-hartless .portfolio-grid {grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;}
+#glen-hartless .gallery-thumb {aspect-ratio:3 / 4;background:#0c0b0a;overflow:hidden;padding:0;}
+#glen-hartless .gallery-thumb img {object-fit:contain;object-position:center;display:block;width:100%;height:100%;}
+#glen-hartless .gallery-thumb:hover {border-color:#dcb46c;}
+#lightbox-image {max-width:94vw;max-height:80vh;object-fit:contain;}
+@media(max-width:610px){#glen-hartless .portfolio-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;}}
