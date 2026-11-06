@@ -1,0 +1,12 @@
+/* V15: exactly requested finish work; original typography, galleries and links remain unchanged. */
+.v15-framed-intro{position:relative!important;isolation:isolate;}
+.v15-framed-intro:before{content:"";position:absolute;inset:14px 15px 16px;z-index:0;pointer-events:none;border:1px solid rgba(205,157,78,.78);box-shadow:inset 0 0 0 6px rgba(11,7,5,.65),0 0 0 1px rgba(90,59,25,.28);}
+.v15-framed-intro>*:not(.v15-corner){position:relative;z-index:2;}
+.v15-corner{position:absolute;display:block;top:21px;width:clamp(68px,9.2vw,145px);height:clamp(60px,8vw,125px);z-index:1;pointer-events:none;background-repeat:no-repeat;background-size:contain;opacity:.97;}
+.v15-corner-left{left:21px;background-image:url('assets/v15-corner-left.webp');background-position:top left;}
+.v15-corner-right{right:21px;background-image:url('assets/v15-corner-right.webp');background-position:top right;}
+.v13-hero-left{padding-top:32px!important;padding-bottom:32px!important;}
+.ornate-divider,.ornate-divider.ornate-divider-soft{height:clamp(113px,12vw,195px)!important;min-height:113px!important;padding:2px 0!important;border-top:1px solid rgba(169,122,48,.8)!important;border-bottom:1px solid rgba(169,122,48,.8)!important;}
+.ornate-divider img,.ornate-divider.ornate-divider-soft img{width:min(1860px,96vw)!important;max-width:none!important;height:100%!important;object-fit:fill!important;filter:drop-shadow(0 3px 6px rgba(0,0,0,.6))!important;}
+@media(max-width:860px){.v15-framed-intro:before{inset:9px 13px 13px;}.v15-corner{top:17px;width:95px;height:85px;}.v15-corner-left{left:17px;}.v15-corner-right{right:17px;}.ornate-divider,.ornate-divider.ornate-divider-soft{height:125px!important;min-height:125px!important;}.ornate-divider img,.ornate-divider.ornate-divider-soft img{width:98vw!important;}}
+@media(max-width:560px){.v15-framed-intro:before{inset:7px 7px 9px;}.v15-corner{top:10px;width:58px;height:52px;}.v15-corner-left{left:12px;}.v15-corner-right{right:12px;}.v13-hero-left{padding-top:24px!important;padding-bottom:29px!important;}.ornate-divider,.ornate-divider.ornate-divider-soft{height:82px!important;min-height:82px!important;}.ornate-divider img,.ornate-divider.ornate-divider-soft img{width:98vw!important;}}
