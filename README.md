@@ -1,3 +1,6 @@
+V18 FULL RELEASE — Updated 2026-11-06
+All 40 original tattoo photos are unchanged. The gold hero title now blends over the filigree, the divider is narrower, and the studio has a soft backdrop created from the approved storefront image.
+
 # Hanger 18 Tattoos — V17 Complete Website + SEO
 
 Full GitHub Pages upload. All five artists present. Galleries: Sean 10 / Dave 10 / Sammy 10 / Glen 10 / Ryan coming soon.

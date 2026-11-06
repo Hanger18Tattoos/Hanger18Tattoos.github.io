@@ -1,0 +1,159 @@
+/* Hanger 18 V18: precise corrections to the approved V17; do not change photos or website links. */
+
+/* Black pixels in the original gold title picture were concealing the authentic
+   ornamental corners. Screen blending keeps every letter pixel intact while
+   allowing the gold corner flourishes to softly appear BEHIND the title. */
+.v15-framed-intro{isolation:isolate!important;background:#040302!important;}
+.v15-framed-intro .v13-hero-lettering{
+  mix-blend-mode:screen!important;
+  isolation:auto!important;
+}
+.v15-framed-intro .v15-corner{
+  z-index:1!important;
+  opacity:.87!important;
+}
+.v15-framed-intro .v13-hero-lettering,
+.v15-framed-intro .hero-description,
+.v15-framed-intro .v13-hero-actions{z-index:2!important;}
+
+/* More elegant proportion: about HALF the previous horizontal divider length.
+   Crucially use contain rather than stretch: the skull and flowers stay true. */
+.ornate-divider,.ornate-divider.ornate-divider-soft{
+  height:clamp(108px,11vw,150px)!important;
+  min-height:108px!important;
+  padding:11px 0!important;
+}
+.ornate-divider img,.ornate-divider.ornate-divider-soft img{
+  width:min(1020px,68vw)!important;
+  max-width:calc(100% - 24px)!important;
+  height:100%!important;
+  object-fit:contain!important;
+  object-position:center!important;
+}
+
+/* Two existing typefaces stay, but HANGER no longer looks miniature next to Eighteen. */
+.studio-signature{font-size:clamp(28px,2.6vw,37px)!important;gap:12px!important;align-items:baseline!important;flex-wrap:wrap;}
+.studio-signature span{font-weight:600!important;}
+.studio-signature em{font-size:clamp(41px,3.4vw,52px)!important;}
+
+/* A soft, genuine 417 Richmond storefront detail, rendered from the approved
+   store image at an angle. A subtle charcoal veil protects text readability. */
+#studio{position:relative!important;isolation:isolate!important;overflow:hidden!important;background:#080706!important;}
+#studio::before{
+  content:"";
+  position:absolute;
+  z-index:-1;
+  inset:0;
+  pointer-events:none;
+  background-image:
+     linear-gradient(90deg,rgba(6,5,4,.95) 0%,rgba(6,5,4,.87) 33%,rgba(6,5,4,.73) 65%,rgba(6,5,4,.83) 100%),
+     linear-gradient(0deg,#060504 0%,rgba(6,5,4,.08) 32%,rgba(6,5,4,.15) 76%,#060504 100%),
+     url('assets/v18-studio-angled-storefront.webp');
+  background-position:center center,center center,center 43%;
+  background-size:cover,cover,cover;
+  background-repeat:no-repeat;
+  opacity:.92;
+}
+#studio .studio-aside{background:linear-gradient(165deg,rgba(27,20,14,.94),rgba(8,7,6,.95))!important;}
+#studio .studio-primary{position:relative;}
+
+@media(max-width:860px){
+  .ornate-divider,.ornate-divider.ornate-divider-soft{height:105px!important;min-height:105px!important;padding:9px 0!important;}
+  .ornate-divider img,.ornate-divider.ornate-divider-soft img{width:min(760px,86vw)!important;object-fit:contain!important;}
+  #studio::before{background-position:center,center,65% center;}
+  .studio-signature{font-size:clamp(24px,4vw,33px)!important;}
+  .studio-signature em{font-size:clamp(38px,6vw,49px)!important;}
+}
+@media(max-width:560px){
+  .ornate-divider,.ornate-divider.ornate-divider-soft{height:72px!important;min-height:72px!important;padding:5px 0!important;}
+  .ornate-divider img,.ornate-divider.ornate-divider-soft img{width:90vw!important;max-width:90vw!important;object-fit:contain!important;}
+  #studio::before{background-image:
+      linear-gradient(90deg,rgba(6,5,4,.90),rgba(6,5,4,.83)),
+      linear-gradient(0deg,#060504,rgba(6,5,4,.25),#060504),
+      url('assets/v18-studio-angled-storefront.webp');
+    background-position:center,center,62% center;}
+  .studio-signature{font-size:29px!important;gap:8px!important;}
+  .studio-signature em{font-size:42px!important;}
+}
+
+
+/* V19 corrections: restore logo, keep hero storefront, and make the studio backdrop
+   visibly live BEHIND the Get Inked With Us content. */
+.wordmark.v13-wordmark.v19-header-logo{
+  width:244px!important;
+  min-width:244px!important;
+  max-width:244px!important;
+  height:106px!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:flex-start!important;
+  background:none!important;
+  color:transparent!important;
+  -webkit-text-fill-color:transparent!important;
+}
+.wordmark.v13-wordmark.v19-header-logo img{
+  width:244px!important;
+  height:106px!important;
+  max-width:244px!important;
+  max-height:106px!important;
+  object-fit:contain!important;
+  object-position:left center!important;
+  display:block!important;
+  filter:drop-shadow(0 3px 5px rgba(0,0,0,.55));
+}
+
+#studio{background:#070605!important;}
+#studio::before{
+  z-index:0!important;
+  inset:0!important;
+  opacity:.78!important;
+  background-image:
+     linear-gradient(90deg,rgba(5,4,4,.93) 0%,rgba(5,4,4,.77) 24%,rgba(5,4,4,.58) 48%,rgba(5,4,4,.73) 76%,rgba(5,4,4,.86) 100%),
+     linear-gradient(0deg,rgba(5,4,4,.90) 0%,rgba(5,4,4,.12) 28%,rgba(5,4,4,.12) 72%,rgba(5,4,4,.88) 100%),
+     url('assets/v18-studio-angled-storefront.webp')!important;
+  background-position:center center,center center,center 45%!important;
+  background-size:cover,cover,cover!important;
+  background-repeat:no-repeat!important;
+}
+#studio .container,
+#studio .studio-layout,
+#studio .studio-primary,
+#studio .studio-aside,
+#studio .section-side{
+  position:relative!important;
+  z-index:1!important;
+}
+#studio .studio-primary{
+  padding:18px 26px 24px!important;
+  border-radius:12px!important;
+  background:linear-gradient(135deg,rgba(7,6,5,.24),rgba(7,6,5,.10))!important;
+  backdrop-filter:blur(.8px);
+}
+#studio .studio-primary::before{
+  content:"";
+  position:absolute;
+  inset:-22px -36px -28px -28px;
+  z-index:-1;
+  background:
+    linear-gradient(90deg,rgba(7,6,5,.80) 0%,rgba(7,6,5,.36) 28%,rgba(7,6,5,.18) 55%,rgba(7,6,5,.62) 100%),
+    linear-gradient(180deg,rgba(7,6,5,.48),rgba(7,6,5,.10) 34%,rgba(7,6,5,.18) 72%,rgba(7,6,5,.46));
+  border-radius:18px;
+  pointer-events:none;
+}
+#studio .studio-aside{background:linear-gradient(165deg,rgba(27,20,14,.90),rgba(8,7,6,.92))!important;}
+
+@media(max-width:1200px){
+  .wordmark.v13-wordmark.v19-header-logo{width:214px!important;min-width:214px!important;max-width:214px!important;height:94px!important;}
+  .wordmark.v13-wordmark.v19-header-logo img{width:214px!important;height:94px!important;max-width:214px!important;max-height:94px!important;}
+}
+@media(max-width:860px){
+  .wordmark.v13-wordmark.v19-header-logo{width:182px!important;min-width:182px!important;max-width:182px!important;height:79px!important;}
+  .wordmark.v13-wordmark.v19-header-logo img{width:182px!important;height:79px!important;max-width:182px!important;max-height:79px!important;}
+  #studio::before{opacity:.84!important;background-position:center,center,58% center!important;}
+  #studio .studio-primary{padding:16px 22px 22px!important;}
+  #studio .studio-primary::before{inset:-16px -18px -22px -18px!important;}
+}
+@media(max-width:610px){
+  .wordmark.v13-wordmark.v19-header-logo{width:151px!important;min-width:151px!important;max-width:151px!important;height:69px!important;}
+  .wordmark.v13-wordmark.v19-header-logo img{width:151px!important;height:69px!important;max-width:151px!important;max-height:69px!important;}
+}
