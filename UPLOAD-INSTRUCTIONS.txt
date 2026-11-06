@@ -1,13 +1,1 @@
-HANGER 18 TATTOOS — V15 FULL WEBSITE
-
-1. Unzip Hanger18-Website-V15-Full-GitHub.zip on your Mac.
-2. Open https://github.com/Hanger18Tattoos/Hanger18Tattoos.github.io
-3. In the main branch (repository root), use Add file > Upload files.
-4. Drag the entire docs folder. Confirm paths include docs/index.html, docs/v15-finishing.css, docs/assets/v15-storefront-silver-actual-sign.webp, and docs/assets/glen-portfolio/...
-5. Commit changes directly to main. GitHub Pages should remain main > /docs.
-6. When deployment completes, open https://hanger18tattoos.github.io/ and hard-refresh with Command + Shift + R.
-
-IMPORTANT: Do not put docs inside another docs folder. No need to change the current DNS.
-This website is a draft preview; other artist portraits may still be linked to the old website.
-The 10 Glen Hartless tattoo images are original uploads and have NOT been edited.
-The shop exterior is a design mockup; the actual red hanging sign is incorporated from the supplied photo.
+V17: Unzip and upload full docs/ folder into ROOT of Hanger18Tattoos/Hanger18Tattoos.github.io. Confirm docs/index.html, docs/site-data.js, docs/artists/*.html, docs/sitemap.xml, and docs/assets/* appear. Commit to main. Pages main /docs. See README.md for domain and Google SEO actions.

@@ -1,0 +1,11 @@
+/* V17 – gallery thumbnails show the full tattoo. Original bytes are unchanged. */
+#sean-strouse .portfolio-grid,#dave-schultz .portfolio-grid,#sammy .portfolio-grid,#glen-hartless .portfolio-grid {grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+#sean-strouse .gallery-thumb,#dave-schultz .gallery-thumb,#sammy .gallery-thumb,#glen-hartless .gallery-thumb{aspect-ratio:3/4;background:#0b0908;overflow:hidden;padding:0}
+#sean-strouse .gallery-thumb img,#dave-schultz .gallery-thumb img,#sammy .gallery-thumb img,#glen-hartless .gallery-thumb img{object-fit:contain;object-position:center;display:block;width:100%;height:100%}
+#sammy .profile-photo img,#ryan-neeb .profile-photo img{object-fit:cover;object-position:center 30%;filter:saturate(.82) contrast(1.05)}
+.artist-card[href="#sammy"] img,.artist-card[href="#ryan-neeb"] img{object-position:center 30%;filter:saturate(.82) contrast(1.05)}
+.artist-seo-links{margin:20px 0 0;display:flex;gap:14px 22px;flex-wrap:wrap;align-items:center;font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+.artist-seo-links a{color:#d9b971;text-decoration:none;border-bottom:1px solid rgba(217,185,113,.45);padding-bottom:3px}
+.artist-seo-links a:hover,.artist-seo-links a:focus{color:#f2d69c;border-color:#f2d69c}
+.profile-full-link{display:inline-block;margin-top:16px;color:#d9b971;text-decoration:underline;text-underline-offset:5px;font-size:12px;letter-spacing:.09em}
+@media(max-width:610px){#sean-strouse .portfolio-grid,#dave-schultz .portfolio-grid,#sammy .portfolio-grid,#glen-hartless .portfolio-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}}
