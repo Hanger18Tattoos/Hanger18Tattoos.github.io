@@ -1,14 +1,28 @@
-HANGER 18 WEBSITE V13 — FULL PACKAGE
+# Hanger 18 Tattoos • V14 (full website)
 
-1. Unzip this file.
-2. Go to https://github.com/Hanger18Tattoos/Hanger18Tattoos.github.io
-3. Upload the whole docs/ folder to the ROOT of the repository.
-   Verify GitHub shows docs/index.html and docs/assets/v13-approved-shop-417.webp.
-4. Commit to main.
-5. Settings > Pages > Build & Deployment: Deploy from branch main, /docs.
-6. Refresh https://hanger18tattoos.github.io/ (Cmd+Shift+R on Mac).
+This is the **full** GitHub Pages website, not an update-only patch.
 
-Booking email: hanger18tattoos@hotmail.com
-Ryan Instagram: https://www.instagram.com/ryanneebtattoo/
+## What changed from V13
+- Approved V13 homepage **unchanged**: same logo, large gold title, storefront and section dividers.
+- Glen Hartless profile: cropped original portrait with mild grain and desaturation for visual consistency.
+- Glen Hartless portfolio: **10 original photographs exactly as supplied**. The photo bytes were copied unchanged, not AI-generated, retouched or recompressed. The original four-sleeve collage counts as one of the 10 gallery items.
+- Glen gallery now displays all 10 images rather than the previous three-photo limit. Click any thumbnail to see the original image in full.
+- Ryan Neeb's correct Instagram remains @ryanneebtattoo.
+- Studio booking email: hanger18tattoos@hotmail.com.
 
-Do not upload a nested Hanger18-V13-Full-GitHub-Upload/docs folder!
+## How to publish
+1. Download and unzip this ZIP.
+2. In GitHub account **Hanger18Tattoos**, open repository **Hanger18Tattoos.github.io**.
+3. Upload the entire `docs/` folder into repository root. The files must appear at `docs/index.html`, `docs/site-data.js`, `docs/v14-gallery.css` and `docs/assets/glen-portfolio/...`.
+4. Commit changes to `main`.
+5. In Settings → Pages, ensure deploy from `main` branch / `docs` folder.
+6. Open https://hanger18tattoos.github.io/ and hard refresh (`Command + Shift + R`).
+
+Existing `docs` paths must be replaced, not uploaded inside another nested folder.
+
+## Keeping photo files true
+- The images in `docs/assets/glen-portfolio/` are the original bytes. Do not overwrite them with generated/AI-edited copies.
+- Portrait source is retained at `docs/assets/glen-hartless-portrait-original.png` for future edits.
+
+## Launch caveat
+Some other artists' photos and studio archive images still hotlink to the old domain, and need locally hosted authorized copies before migrating that domain's hosting. This V14 is still a prelaunch preview.

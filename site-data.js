@@ -35,11 +35,18 @@ window.H18 = {
         'Glen has been tattooing since 2007. His work focuses on illustrative realism, black-and-grey portraiture and demanding custom pieces.',
         'After tattooing across Canada and internationally, he continues to work with London and Toronto clients, including large-scale work and complex cover-ups.'
       ],
-      portrait:'',instagram:'https://www.instagram.com/glenhartless/',
+      portrait:'assets/glen-hartless-portrait-v14.webp',instagram:'https://www.instagram.com/glenhartless/',
       gallery:[
-        {src:'https://cdn.tattooswizard.com/artists/5ce4526ada7e072712506bb4/tattoos/5d021f9e99920c92793908b6',alt:'Black and grey tattoo by Glen Hartless, sourced from his TattoosWizard portfolio'},
-        {src:'https://cdn.tattooswizard.com/artists/5ce4526ada7e072712506bb4/tattoos/5d021f9f99920c92793908b7',alt:'Trash polka tattoo by Glen Hartless, sourced from his TattoosWizard portfolio'},
-        {src:'https://cdn.tattooswizard.com/artists/5ce4526ada7e072712506bb4/tattoos/5d021fb599920c92793908d1',alt:'Realism tattoo by Glen Hartless, sourced from his TattoosWizard portfolio'}
+        {src:'assets/glen-portfolio/01-diet-coke.jpg',alt:'Realistic Diet Coke can tattoo on lower leg'},
+        {src:'assets/glen-portfolio/02-sleeve-work.jpg',alt:'Four black-and-grey sleeve tattoos'},
+        {src:'assets/glen-portfolio/03-sailing-ship.jpg',alt:'Black-and-grey tall ship and compass sleeve tattoo'},
+        {src:'assets/glen-portfolio/04-lion-portrait.jpg',alt:'Black-and-grey lion portrait forearm tattoo'},
+        {src:'assets/glen-portfolio/05-pirate-skull.jpg',alt:'Black-and-grey bound skull lower leg tattoo'},
+        {src:'assets/glen-portfolio/06-colour-roses.jpg',alt:'Colour rose and geometric pattern forearm tattoo'},
+        {src:'assets/glen-portfolio/07-ornamental-blackwork.jpg',alt:'Ornamental blackwork lower leg tattoo'},
+        {src:'assets/glen-portfolio/08-clock-beach.jpg',alt:'Clock, lettering and tropical beach arm tattoo'},
+        {src:'assets/glen-portfolio/09-colour-floral.jpg',alt:'Colour floral upper arm tattoo'},
+        {src:'assets/glen-portfolio/10-polynesian.jpg',alt:'Polynesian ornamental blackwork leg tattoo'}
       ]
     },
     {

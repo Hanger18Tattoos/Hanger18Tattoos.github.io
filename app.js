@@ -19,7 +19,8 @@
     card.innerHTML = `<div class="artist-card-photo">${photoHtml}<span class="artist-card-n">0${i+1}</span></div><div class="artist-card-meta"><div><span>${safe(artist.role)}</span><strong>${safe(artist.name)}</strong></div><span class="artist-arrow" aria-hidden="true">↗</span></div>`;
     directory.appendChild(card);
 
-    const photos = [0,1,2].map((idx) => {
+    const photoSlots = Math.max(3, artist.gallery.length);
+    const photos = Array.from({length:photoSlots}, (_,idx) => {
       const gallery = artist.gallery[idx];
       if (!gallery) return `<div class="portfolio-placeholder"><span class="portfolio-placeholder-number">0${idx+1}</span><span>TATTOO PHOTO<br>COMING SOON</span></div>`;
       const file = typeof gallery === 'string' ? gallery : gallery.src;
