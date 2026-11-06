@@ -1,7 +1,16 @@
-# Hanger 18 Tattoos — V20
+# Hanger 18 Tattoos — V21 final GitHub Pages build
 
-Full GitHub Pages package based on V19. Changes: black & grey artist **directory** portraits for all five artists; full profile portraits and tattoo portfolios remain full colour. The new override is `v20-artist-cards.css`.
+Latest approved gold-and-charcoal design, with the correct flat-mounted red studio sign and shop address heading.
 
-All existing branding, shop hero, studio background, filigree, links, original tattoo images, and SEO files are carried forward unchanged.
+- Home: `docs/index.html`
+- Artist portfolios: `docs/artists/`
+- Original tattoo portfolio files: `docs/assets/*-portfolio/` (unchanged from V20)
+- Five artist booking buttons now email the selected artist directly; general studio enquiries use `hanger18tattoos@hotmail.com`.
+- Ryan's Instagram: `@ryanneebtattoo`.
+- Site metadata includes descriptions, canonical URLs, local business structured data, robots.txt and sitemap.xml. These help discovery but cannot guarantee search rankings.
 
-Deploy by replacing the repo's existing `docs/` contents with the contents of this ZIP's `docs/` folder. Use **main / docs** in Pages settings.
+## Publishing
+Upload the contents of the `docs` folder into the existing `docs` folder at your GitHub repository root, **not `docs/docs`**. Confirm GitHub Pages is configured as main /docs.
+
+## Pre-launch note
+Existing studio-archive images and Sean/Dave's profile photos may load from the old hanger18tattoos.com domain; save authorized local copies before moving DNS or disabling the old site.

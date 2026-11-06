@@ -4,9 +4,8 @@
   if (!data) return;
   const directory = document.getElementById('artist-directory');
   const profiles = document.getElementById('artist-profiles');
-  const email = data.shopEmail;
   const safe = (s) => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]));
-  const artistBooking = (name) => `mailto:${email}?subject=${encodeURIComponent(`Tattoo booking inquiry — ${name}`)}&body=${encodeURIComponent(`Hello Hanger 18,\n\nI'd like to inquire about booking with ${name}.\n\nMy tattoo idea:\nApproximate size / placement:\nAvailability:\n\nThank you!`)}`;
+  const artistBooking = (artist) => `mailto:${encodeURIComponent(artist.bookingEmail || data.shopEmail).replace(/%40/g,'@')}?subject=${encodeURIComponent(`Tattoo booking inquiry — ${artist.name}`)}&body=${encodeURIComponent(`Hello ${artist.name},\n\nI'd like to inquire about a tattoo appointment.\n\nMy tattoo idea:\nApproximate size / placement:\nAvailability:\n\nThank you!`)}`;
 
   data.artists.forEach((artist, i) => {
     const photoHtml = artist.portrait
@@ -31,7 +30,7 @@
     const section = document.createElement('article');
     section.className = 'artist-profile';
     section.id = artist.id;
-    section.innerHTML = `<div class="container profile-grid"><div class="profile-art reveal"><div class="profile-photo">${photoHtml}</div><span class="profile-photo-note">HANGER 18 / ARTIST 0${i+1}</span></div><div class="profile-copy reveal"><div class="profile-top"><span>ARTIST 0${i+1} / 0${data.artists.length}</span><span>${safe(artist.tag)}</span></div><h3>${safe(artist.name)}</h3><span class="profile-role">${safe(artist.role)}</span><div class="profile-bio">${artist.bio.map(p=>`<p>${safe(p)}</p>`).join('')}</div><div class="profile-links"><a class="button button-gold" href="${artistBooking(artist.name)}">BOOK WITH ${safe(artist.name.split(' ')[0]).toUpperCase()} <span aria-hidden="true">↗</span></a>${artist.instagram ? `<a class="inline-link" target="_blank" rel="noopener noreferrer" href="${safe(artist.instagram)}">INSTAGRAM ↗</a>` : ''}</div><a class="profile-full-link" href="artists/${safe(artist.id)}.html">VIEW FULL ARTIST PORTFOLIO ↗</a><div class="portfolio-heading"><strong>SELECTED WORK</strong><span>PORTFOLIO / 0${i+1}</span></div><div class="portfolio-grid">${photos}</div></div></div>`;
+    section.innerHTML = `<div class="container profile-grid"><div class="profile-art reveal"><div class="profile-photo">${photoHtml}</div><span class="profile-photo-note">HANGER 18 / ARTIST 0${i+1}</span></div><div class="profile-copy reveal"><div class="profile-top"><span>ARTIST 0${i+1} / 0${data.artists.length}</span><span>${safe(artist.tag)}</span></div><h3>${safe(artist.name)}</h3><span class="profile-role">${safe(artist.role)}</span><div class="profile-bio">${artist.bio.map(p=>`<p>${safe(p)}</p>`).join('')}</div><div class="profile-links"><a class="button button-gold" href="${artistBooking(artist)}">BOOK WITH ${safe(artist.name.split(' ')[0]).toUpperCase()} <span aria-hidden="true">↗</span></a>${artist.instagram ? `<a class="inline-link" target="_blank" rel="noopener noreferrer" href="${safe(artist.instagram)}">INSTAGRAM ↗</a>` : ''}</div><a class="profile-full-link" href="artists/${safe(artist.id)}.html">VIEW FULL ARTIST PORTFOLIO ↗</a><div class="portfolio-heading"><strong>SELECTED WORK</strong><span>PORTFOLIO / 0${i+1}</span></div><div class="portfolio-grid">${photos}</div></div></div>`;
     profiles.appendChild(section);
   });
 

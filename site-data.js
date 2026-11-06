@@ -7,7 +7,7 @@ window.H18 = {
   shopEmail:'hanger18tattoos@hotmail.com',
   artists:[
     {
-      id:'sean-strouse', name:'Sean Strouse', initials:'SS', role:'FOUNDER / TATTOO ARTIST', tag:'FOUNDER • EST. 1998',
+      id:'sean-strouse', bookingEmail:'hanger18tattoos@hotmail.com', name:'Sean Strouse', initials:'SS', role:'FOUNDER / TATTOO ARTIST', tag:'FOUNDER • EST. 1998',
       bio:[
         'Sean founded Hanger 18 in 1998 and has been tattooing in London, Ontario for over three decades.',
         'He has travelled across Canada and the United States to work alongside other artists, with an approach that emphasizes strong linework, smooth shading and versatility.'
@@ -27,7 +27,7 @@ window.H18 = {
       ]
     },
     {
-      id:'dave-schultz', name:'Dave F’n Schultz', initials:'DS', role:'TATTOO ARTIST',tag:'NEO-TRADITIONAL • COLOUR',
+      id:'dave-schultz', bookingEmail:'davefnschultz@gmail.com', name:'Dave F’n Schultz', initials:'DS', role:'TATTOO ARTIST',tag:'NEO-TRADITIONAL • COLOUR',
       bio:[
         'Dave has been tattooing at Hanger 18 since 2005.',
         'His work spans neo-traditional pieces, rich colour saturation and high-contrast black and grey. His painting and pop-art influences carry through into his tattoos.'
@@ -47,7 +47,7 @@ window.H18 = {
       ]
     },
     {
-      id:'sammy',name:'Sammy',initials:'S',role:'TATTOO ARTIST',tag:'TRADITIONAL • COLOUR',
+      id:'sammy', bookingEmail:'southpawsammytattoo@gmail.com',name:'Sammy',initials:'S',role:'TATTOO ARTIST',tag:'TRADITIONAL • COLOUR',
       bio:['Sammy’s portfolio includes colourful traditional tattoos, graphic floral pieces, character work and bold compositions.','Explore a selection of Sammy’s tattoos below, or get in touch with the studio about an appointment.'],
       portrait:'assets/sammy-approved-portrait-v17.webp',instagram:'https://www.instagram.com/southpawsammyy/',gallery:[
         {src:'assets/sammy-portfolio/01-snake-traditional.jpg',alt:'Colour traditional snake with leaves tattoo'},
@@ -63,7 +63,7 @@ window.H18 = {
       ]
     },
     {
-      id:'glen-hartless',name:'Glen Hartless',initials:'GH',role:'TATTOO ARTIST',tag:'ILLUSTRATIVE REALISM • BLACK & GREY',
+      id:'glen-hartless', bookingEmail:'glen@glenhartless.com',name:'Glen Hartless',initials:'GH',role:'TATTOO ARTIST',tag:'ILLUSTRATIVE REALISM • BLACK & GREY',
       bio:[
         'Glen has been tattooing since 2007. His work focuses on illustrative realism, black-and-grey portraiture and demanding custom pieces.',
         'After tattooing across Canada and internationally, he continues to work with London and Toronto clients, including large-scale work and complex cover-ups.'
@@ -83,7 +83,7 @@ window.H18 = {
       ]
     },
     {
-      id:'ryan-neeb',name:'Ryan Neeb',initials:'RN',role:'TATTOO ARTIST',tag:'PORTFOLIO COMING SOON',
+      id:'ryan-neeb', bookingEmail:'neebryan4@gmail.com',name:'Ryan Neeb',initials:'RN',role:'TATTOO ARTIST',tag:'PORTFOLIO COMING SOON',
       bio:['Ryan is part of the Hanger 18 team in downtown London. His selected tattoo gallery is coming soon.','For booking inquiries, contact the studio or visit Ryan’s Instagram profile.'],
       portrait:'assets/ryan-neeb-portrait-v17.webp',instagram:'https://www.instagram.com/ryanneebtattoo/',gallery:[]
     }

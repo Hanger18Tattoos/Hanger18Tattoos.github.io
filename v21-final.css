@@ -1,0 +1,6 @@
+/* FINAL V21: preserve the approved gold/black design and artist styling. */
+#visit #visit-title { font-size: clamp(32px, 4.6vw, 78px) !important; line-height:1.08 !important; overflow-wrap:normal; }
+#visit #visit-title span { display:block; }
+@media (max-width:640px) {
+  #visit #visit-title { font-size: clamp(29px, 8vw, 52px) !important; }
+}
