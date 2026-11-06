@@ -1,6 +1,18 @@
-HANGER 18 V22 - COMPLETE WEBSITE PACKAGE
+HANGER 18 TATTOOS — V23 FULL GITHUB UPLOAD
 
-Upload the complete docs/ folder to the repository root, replacing the existing docs/ folder files.
-In GitHub Pages Settings, publish from main /docs.
-This release keeps the approved V21 imagery, portfolios and visual theme.
-Changes: GET TATTOOED wording; clearer studio copy; full Eighteen signature; non-clipped 417 Richmond Street headline.
+1. Unzip Hanger18-V23-Full-GitHub.zip.
+2. Open GitHub account Hanger18Tattoos, repository Hanger18Tattoos.github.io.
+3. Upload the entire docs/ folder to the repository root, replacing old files.
+   You must end with docs/index.html (NOT docs/docs/index.html).
+4. Commit changes to main.
+5. In Settings -> Pages, ensure deployment is from main /docs.
+6. After deployment, open https://hanger18tattoos.github.io/?v=23
+   or hard-refresh the browser (Mac: Command+Shift+R).
+
+New V23 assets:
+- docs/assets/v23-official-header-logo-clean.png
+- docs/assets/v23-approved-lettering-transparent.png
+- docs/assets/v23-storefront-wall-restored.webp
+- docs/v23-final-fixes.css
+
+All artist galleries and email links remain as in V22.
