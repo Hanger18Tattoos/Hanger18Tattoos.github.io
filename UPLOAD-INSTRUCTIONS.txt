@@ -9,6 +9,8 @@ HANGER 18 TATTOOS — V24 FULL GITHUB UPLOAD
 6. Once GitHub Pages completes deployment, open https://hanger18tattoos.github.io/?v=24
    or hard refresh (Mac: Command+Shift+R).
 
-Approved new storefront file: docs/assets/v24-storefront-approved-flat-sign.webp
+Approved new storefront file: docs/assets/v25-storefront-real-sign.webp
 IMPORTANT: Upload the new image AND the updated docs/index.html together.
 This package includes the complete website and all artist galleries.
+
+V25: Only storefront image was updated. The red wall sign is composited from the supplied real shop photograph; all pages, artists and booking links remain unchanged.
