@@ -1,0 +1,17 @@
+/* V22: Only the approved text, legibility, and clipping fixes. */
+/* More readable studio text over the existing subdued storefront artwork. */
+#studio .studio-primary .lead { font-size:clamp(19px,1.75vw,26px) !important; line-height:1.52 !important; }
+#studio .studio-primary p:not(.kicker):not(.lead) { font-size:clamp(15px,1.1vw,18px) !important; line-height:1.85 !important; color:#ded7cd !important; }
+#studio .studio-primary .inline-link { font-size:clamp(11px,.85vw,14px) !important; }
+/* The artist signature must remain fully visible, including the full script Eighteen. */
+#studio .studio-signature {display:flex!important; flex-wrap:wrap!important; align-items:baseline!important; gap:clamp(6px,1.3vw,18px)!important; max-width:100%!important; overflow:visible!important; padding:4px 0 12px!important; white-space:normal!important;}
+#studio .studio-signature span {font-size:clamp(22px,2.1vw,35px)!important; flex:0 0 auto;}
+#studio .studio-signature em {font-size:clamp(35px,3.1vw,52px)!important; line-height:1.28!important; display:inline-block!important; padding-right:.18em!important; max-width:100%!important;}
+/* Keep the full street name inside the left grid column rather than clipping it. */
+#visit .visit-layout {grid-template-columns:minmax(0,390px) minmax(0,1fr)!important; gap:clamp(35px,4vw,75px)!important;}
+#visit .visit-header, #visit #visit-title {min-width:0!important; max-width:100%!important; overflow:visible!important;}
+#visit #visit-title {font-size:clamp(30px,3vw,53px)!important; line-height:1.18!important; letter-spacing:-.045em!important; overflow-wrap:normal!important; word-break:normal!important;}
+#visit #visit-title span {display:block!important; color:inherit;}
+#visit #visit-title .address-street {white-space:nowrap!important;}
+@media(max-width:1000px) {#visit .visit-layout {grid-template-columns:minmax(0,1fr)!important;} #visit #visit-title {font-size:clamp(34px,6vw,64px)!important;}}
+@media(max-width:610px) {#studio .studio-signature span {font-size:23px!important;} #studio .studio-signature em {font-size:clamp(32px,9vw,42px)!important;} #visit #visit-title {font-size:clamp(31px,9vw,48px)!important;} #studio .studio-primary p:not(.kicker):not(.lead){font-size:16px!important;}}

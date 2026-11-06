@@ -1,12 +1,6 @@
-HANGER 18 TATTOOS • V21 FINAL
+HANGER 18 V22 - COMPLETE WEBSITE PACKAGE
 
-1. Extract this ZIP.
-2. Open your GitHub repository: Hanger18Tattoos/Hanger18Tattoos.github.io
-3. Open the current docs/ folder, and upload the files and subfolders contained in the new docs/ folder into that same docs/ directory. Replace files with matching names.
-4. Commit to main.
-5. Settings > Pages should remain: Deploy from branch > main > /docs.
-6. Visit https://hanger18tattoos.github.io/ and hard refresh (Mac: Command+Shift+R).
-
-IMPORTANT: Do not place the new docs folder inside the existing docs folder.
-The 5 artist mailto buttons go to their respective addresses. The public studio contact email is hanger18tattoos@hotmail.com.
-The tattoo photos are preserved exactly.
+Upload the complete docs/ folder to the repository root, replacing the existing docs/ folder files.
+In GitHub Pages Settings, publish from main /docs.
+This release keeps the approved V21 imagery, portfolios and visual theme.
+Changes: GET TATTOOED wording; clearer studio copy; full Eighteen signature; non-clipped 417 Richmond Street headline.
