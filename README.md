@@ -1,17 +1,19 @@
-# Hanger 18 Tattoos • V9
+# Hanger 18 Tattoos | Website V13
 
-## What changed
-- The new hero uses **two gold lettering assets and filigree cut out from Glen’s approved Photoshop mockup**, not the complete mockup image.
-- Everything below the lettering is HTML: description, booking buttons, navigation, artist cards, contact links.
-- The header contains one fixed logo.
-- The shop picture uses the approved edited storefront photo.
-- The five artists and their gallery data remain in `site-data.js`.
+Fully working single-page website for GitHub Pages under `Hanger18Tattoos.github.io`.
 
-## Publishing to existing GitHub Pages
-Upload the `docs` folder to repository root on `Hanger18Tattoos/Hanger18Tattoos.github.io`, committing changed files. Pages: `main` branch, `/docs` folder.
+**Approved layout:** Split introduction with actual gold Hanger 18 art on the left, storefront concept featuring **417** on the right, the approved gold skull separator, and all original artist and shop sections below. This is a concept design; the storefront hero is stylized, not an unaltered photo.
 
-## Assets
-`assets/v9-photoshop-signature.webp` and `assets/v9-photoshop-tagline.webp` are extracted visual lettering only. Change photos/artist profiles using `site-data.js`.
+## Publishing
 
-## Important
-Legacy gallery image URLs still refer to the old website and need local copies before changing domain DNS.
+Upload the **`docs`** folder from the extracted ZIP into the **root** of your `Hanger18Tattoos.github.io` repo, preserving paths `docs/index.html`, `docs/v13-home.css` and `docs/assets/...`. In Settings → Pages, set branch `main`, folder `/docs`. The site should appear at https://hanger18tattoos.github.io/.
+
+**Important:** Browser uploads may not replace existing files. Check your commit has changed `docs/index.html`, and contains `docs/v13-home.css` and both `v13` images. If it refuses, edit files through GitHub's pencil icon or use GitHub Desktop to replace them.
+
+## Editing
+
+Artist data (including Instagram handles): `docs/site-data.js`. All primary buttons are true HTML links to page sections; shop booking emails go to `hanger18tattoos@hotmail.com`. No browser plugins or personal accounts required.
+
+## Launch notes
+
+Artist portraits and some studio gallery images are still linked from the existing site or third-party pages. Replace with authorized local assets before retiring old hosting or moving the live domain. Verify shop details, accessibility, and mobile layout before official launch.

@@ -1,1 +1,14 @@
-Upload the docs/ folder to the root of Hanger18Tattoos.github.io; commit. GitHub Pages must be main /docs. To avoid stale CSS, V9 uses unique new asset names and v9-custom.css.
+HANGER 18 WEBSITE V13 — FULL PACKAGE
+
+1. Unzip this file.
+2. Go to https://github.com/Hanger18Tattoos/Hanger18Tattoos.github.io
+3. Upload the whole docs/ folder to the ROOT of the repository.
+   Verify GitHub shows docs/index.html and docs/assets/v13-approved-shop-417.webp.
+4. Commit to main.
+5. Settings > Pages > Build & Deployment: Deploy from branch main, /docs.
+6. Refresh https://hanger18tattoos.github.io/ (Cmd+Shift+R on Mac).
+
+Booking email: hanger18tattoos@hotmail.com
+Ryan Instagram: https://www.instagram.com/ryanneebtattoo/
+
+Do not upload a nested Hanger18-V13-Full-GitHub-Upload/docs folder!
